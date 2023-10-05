@@ -60,3 +60,11 @@ avec url : l'url copié
 github :
 si invité : forker le dépot (on sera proprio de la copie créé)
 on fait des modification on les pousse sur la copie on previent le proprio (pull request) du projet initial que nous avons des modification à apporter il les accepte dans son depot
+
+git clone url : cloner le depot
+cd depot : se placer dans le depot
+faire les modifications : ajouts copies modifs de fichiers et de dossiers
+git status : pour voir le statut
+git add . : pour tout ajouter dans la zone d'indexe
+git commit -m "message"
+git push : pour pousser le depot local dans le depot github
