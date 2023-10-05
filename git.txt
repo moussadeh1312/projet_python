@@ -68,3 +68,10 @@ git status : pour voir le statut
 git add . : pour tout ajouter dans la zone d'indexe
 git commit -m "message"
 git push : pour pousser le depot local dans le depot github
+
+créer une branche : git switch -c nombranche
+
+git push --upstream origin nombranche : pour pousser le depot vers une nouvelle branche
+
+git remote -vvv : liste des remotes en locale qui pointent vers la copie du projet dont je suis proprietaire
+git remote add proprio url : ajoute un remote en local 
