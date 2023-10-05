@@ -1,0 +1,34 @@
+1.
+    test des programmes:
+
+    Télécharger d'abord les fichiers
+
+    $ chmod u+x *.py : pour accorder le droit d'execution des scripts à l'utilisateur
+
+    $ ./minmax.py [ [ 1 2 ] [ [ 2 3 4 ] [ 5 4 3 2 ] [ [ 3 1 ] [ 2 ] ] ] [ 0 9 ] ]
+    affichage :
+    2
+
+    $ ./tri.py
+    affichage :
+    ? [ [ 1 2 ] [ [ 2 3 4 ] [ 5 4 3 2 ] [ [ 3 1 ] [ 2 ] ] ] [ 0 9 ] ]
+    l=[[1, 2], [[2, 3, 4], [2, 3, 4, 5], [[1, 3], [2]]], [0, 9]]
+
+    $ touch listes.txt : créer un fichier text vide
+    $ nano listes.txt : editer le fichier en yinsérant une liste de type L sur chaque ligne
+    $ ./prof.py listes.txt : executer le script python en lui passant le fichier créé en paramètre
+    affichage :
+    l=[[1, 2], [[2, 3, 4], [5, 4, 3, 2], [[3, 1], [2]]], [0, 9]]
+    profondeur(l)=4
+    l=[[[[1, 6, 3, 1, 4]]]]
+    profondeur(l)=4
+    l=[[[[[1, 5, 3, 4, 2]]]]]
+    profondeur(l)=5
+
+2.
+    $ touch minmaxV2.py, profV2.py, triV2.py, codeCommun.py : Ces fichier vont contenir le code factorisé des fichiers recupérés sur moodle
+    $ chmod a+x minmaxV2.py, profV2.py, triV2.py : accorder le droit d'execution à tout le monde sur ces fichiers
+
+    codeCommun.py : contient le code qui se repete sur les 3 programmes (recuperation et création de la liste) qu'on importera dans les autres fichiers afin de les utiliser
+    
+    pour les détails, voir (les fichiers en question)

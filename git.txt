@@ -1,1 +1,62 @@
-ybvurbviubry
+git : gestionnaire de versions de projets
+githib : hebergeur de dépôts
+github a été racheté par microsoft
+l'outil git et la platforme github travaillent ensemble
+
+installation linux :
+vérifier que ce n'est pas encore installé
+git version
+commande pour installer
+$sudo apt install git-all
+-all : installe aussi tous les outils rattaché à git
+
+configuration :
+$git config --global user.name "Moussa Deh"
+$git config --global user.email "moussa.deh@etud.univ-angers.fr"
+$git config --global --list : pour lister la configuration
+
+comment réaliser un dépot git et comment enregistrer différentes versions d'un projet
+dépot git : utiliser un dossier contenant le projet puis le transformer en depot via une commande appelée git init 
+git init : va ajouter un dossier caché nommé .git qui contient un ensemble d'informations
+qui permettent la gestion du projet comme étant un dépot git 
+il contient l'historique des modifications par exemple
+
+Dossier de travail => zone d'indexe => dépot locale
+zone d'indexe : contient l'ensemble de nos modifications 
+
+se placer dans le dossier qui contient le projet
+taper la commande git init 
+pour créer le dépot
+commancer les modifications des fichiers du projet
+git status  : pour vois les fichier qu'on a modifié (pour voir les fichiers qui ne sont pas dans le dépot git)
+
+indexer les fichiers modifiés pour les ajouter dans le dépot 
+$git add : pour indexer les fichiers (les fichiers en questions sont dans la zone d'indexe)
+$git reset : pour desindexer
+$git add . : met toutes les modifications du workspace dans la zone d'indexe
+
+enregistrer les modifications dans le dépot local avec la commande commit
+$git commit -m "mon commit"
+
+afficher les modifications 
+quand on modifie nos fichiers
+git status nous dit que nous avons modifié des fichiers (des informations sont dans le workspace mais pas le dépot ou la zone d'indexage)
+$git diff : pour afficher les modifications
+git diff --cached : pour voir les modifications dans la zone d'indexe
+
+communication ssh : 
+dans la machine locale : générer une paire de clefs ssh (clé privé, clé public)
+donner la clé public aux différentes machines sur lesquels on souhaite communiquer de manière securisé
+la machine crypte les données qu'il envoi et ce n'est qu'avec la clé privé qu'on peut decrypter ces données
+
+génération : $ssh-keygen
+qui créera les les fichiers id_rsa  id_rsa.pub dans /home/moussa/.ssh
+copier le contenu de id_rsa.pub pour la rajouter dans github
+github => profil => settings => SSH... => new ssh => coller ce qui a été copié
+pour tester:
+aller sur un dépot => clone or download => copier l'url ssh => git clone url 
+avec url : l'url copié
+
+github :
+si invité : forker le dépot (on sera proprio de la copie créé)
+on fait des modification on les pousse sur la copie on previent le proprio (pull request) du projet initial que nous avons des modification à apporter il les accepte dans son depot
